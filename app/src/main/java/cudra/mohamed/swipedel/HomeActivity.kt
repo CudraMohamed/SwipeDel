@@ -6,16 +6,19 @@ import android.view.View
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
+import cudra.mohamed.swipedel.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
+    lateinit var binding: ActivityHomeBinding
     lateinit var rvCourses:RecyclerView
     lateinit var courseRVAdapter:CourseRVAdapter
     lateinit var courseList:ArrayList<CourseRVModal>
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding= ActivityHomeBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(binding.root)
 
-        rvCourses=findViewById(R.id.ivCourse)
+        rvCourses=findViewById(R.id.rvCourses)
 
         courseList=ArrayList()
 
@@ -27,6 +30,12 @@ class HomeActivity : AppCompatActivity() {
         courseList.add(CourseRVModal("Python Development",R.drawable.python))
         courseList.add(CourseRVModal("JavaScript Development",R.drawable.js))
         courseList.add(CourseRVModal("Game Development",R.drawable.game))
+        courseList.add(CourseRVModal("Backend Development",R.drawable.backend))
+        courseList.add(CourseRVModal("Frontend Development",R.drawable.frontend_web))
+        courseList.add(CourseRVModal("Quality Analysis",R.drawable.qa))
+        courseList.add(CourseRVModal("UI/UX Design",R.drawable.ui_ux_design))
+        courseList.add(CourseRVModal("UX Research",R.drawable.ux_research))
+        courseList.add(CourseRVModal("Product Management",R.drawable.pm))
 
         courseRVAdapter.notifyDataSetChanged()
 

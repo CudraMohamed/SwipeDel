@@ -13,6 +13,7 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnSignUp.setOnClickListener {
+            startActivity(Intent(this,LogInActivity::class.java))
             validateSignUp()
         }
         binding.tvLogIn.setOnClickListener {

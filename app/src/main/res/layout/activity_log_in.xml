@@ -7,7 +7,7 @@
     tools:context=".LogInActivity">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilEmail"
+        android:id="@+id/tilEmailL"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -19,7 +19,7 @@
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etEmail"
+            android:id="@+id/etEmailL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Email" />
@@ -33,7 +33,7 @@
         app:layout_constraintGuide_percent="0.4"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilPassword"
+        android:id="@+id/tilPasswordL"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -42,11 +42,11 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilEmail"
+        app:layout_constraintTop_toBottomOf="@+id/tilEmailL"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPassword"
+            android:id="@+id/etPasswordL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Password" />
@@ -58,10 +58,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Log In"
-        app:cornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/tilPasswordL" />
 
     <TextView
         android:id="@+id/tvSignUp"
@@ -79,7 +78,7 @@
         android:id="@+id/imgLogo"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        app:layout_constraintBottom_toTopOf="@+id/tilEmail"
+        app:layout_constraintBottom_toTopOf="@+id/tilEmailL"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

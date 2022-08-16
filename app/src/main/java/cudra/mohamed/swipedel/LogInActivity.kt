@@ -25,24 +25,24 @@ class LogInActivity : AppCompatActivity() {
         }
     }
     fun validateLogIn(){
-        var email=binding.etEmail.text.toString()
-        var password=binding.etPassword.text.toString()
+        var email=binding.etEmailL.text.toString()
+        var password=binding.etPasswordL.text.toString()
         var error=false
 
         if(email.isBlank()){
-            binding.tilEmail.error="Email is required"
+            binding.tilEmailL.error="Email is required"
             error=true
         }
         else if(password.isBlank()){
-            binding.tilPassword.error="Password is required"
+            binding.tilPasswordL.error="Password is required"
             error=true
         }
         else if(password.length<8){
-            binding.tilPassword.error="Password is too short"
+            binding.tilPasswordL.error="Password is too short"
             error=true
         }
         else if(password.length>16){
-            binding.tilPassword.error="Password is too long"
+            binding.tilPasswordL.error="Password is too long"
         }
         if(!error){
             startActivity(Intent(this,HomeActivity::class.java))
